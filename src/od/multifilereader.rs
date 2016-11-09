@@ -38,8 +38,8 @@ impl<'b> MultifileReader<'b> {
         // loop retries with subsequent files if err - normally 'loops' once
         loop {
             if self.ni.len() == 0 {
-                    self.curr_file = None;
-                    break;
+                self.curr_file = None;
+                break;
             }
             match self.ni.remove(0) {
                 InputSource::Stdin => {
